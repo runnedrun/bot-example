@@ -11,6 +11,11 @@
         color: red;
       }
       
+      #bot-output {
+        position: relative;
+        top: 500px;
+      }
+      
       #robot-pic {
         width: 50px;
       }
@@ -63,7 +68,7 @@
         } else if (text === "robot come out!") {
           gameOutput.html("🤖️🤖️")
         } else if (text ==="move") {
-          gameOutput
+          gameOutput.animate({top: 500})
         }
       }
 
