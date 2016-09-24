@@ -1,11 +1,21 @@
 <html>
   <head>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    
+    
+    
+    
+    
     <style>
       #bot-name {
         color: red;
       }
     </style>
+    
+    
+    
+    
+    
   </head>
   <body>
     <div id="bot-name">
@@ -19,7 +29,30 @@
 
       </div>      
     </div>
-    <script src="script.js">
+    
+    
+    
+    <script>
+      var gameInput = $("#bot-input");
+      var gameOutput  = $("#bot-output");
+      gameInput.keydown(function(keydownEvent) {  
+        // the key code for enter is 13
+        if (keydownEvent.keyCode == 13) {      
+          parseText(gameInput.val()); 
+          gameInput.val("");
+        }  
+      })
+
+      function parseText(text) {    
+        if (text === "hello") {
+          gameOutput.html("Hi there!");
+        }
+      }
     </script>
+    
+    
+    
+    
+    
   </body>
 </html>
